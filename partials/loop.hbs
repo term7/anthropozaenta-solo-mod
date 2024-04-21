@@ -31,18 +31,6 @@
                 {{#if reading_time}}
                     <span class="gh-card-length">{{reading_time}}</span>
                 {{/if}}
-                {{#unless access}}
-                {{^has visibility="public"}}
-                    <span class="gh-card-access">
-                        {{> "icons/lock"}}
-                        {{#has visibility="members"}}
-                            Members
-                        {{else}}
-                            Paid
-                        {{/has}}
-                    </span>
-                {{/has}}
-                {{/unless}}
                 {{#if @site.comments_enabled}}
                     {{comment_count class="gh-card-comments"}}
                 {{/if}}
