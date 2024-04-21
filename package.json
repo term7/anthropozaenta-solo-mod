@@ -1,5 +1,5 @@
 {
-    "name": "solo",
+    "name": "anthropozaenta-solo-mod",
     "description": "A Ghost theme",
     "version": "1.0.0",
     "private": true,
@@ -8,16 +8,16 @@
     },
     "license": "MIT",
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "term7",
+        "email": "admin@term7.info",
+        "url": "https://term7.info"
     },
     "keywords": [
         "ghost",
         "theme",
         "ghost-theme"
     ],
-    "docs": "https://solo.ghost.io/about/",
+    "docs": "https://anthropozaenta.org/about/",
     "config": {
         "posts_per_page": 6,
         "image_sizes": {
@@ -82,26 +82,5 @@
                 "group": "homepage"
             }
         }
-    },
-    "scripts": {
-        "dev": "gulp",
-        "test": "gscan .",
-        "zip": "gulp zip"
-    },
-    "devDependencies": {
-        "@tryghost/shared-theme-assets": "2.4.3",
-        "autoprefixer": "10.4.19",
-        "beeper": "2.1.0",
-        "cssnano": "6.1.2",
-        "gscan": "4.43.0",
-        "gulp": "5.0.0",
-        "gulp-concat": "2.6.1",
-        "gulp-livereload": "4.0.2",
-        "gulp-postcss": "10.0.0",
-        "gulp-uglify": "3.0.2",
-        "gulp-zip": "5.1.0",
-        "postcss": "8.4.38",
-        "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0"
     }
 }
