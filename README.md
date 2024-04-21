@@ -1,38 +1,67 @@
-# Solo
+# anthropozaenta-solo-mod
 
-Solo is a minimal theme for [Ghost](https://github.com/TryGhost/Ghost) focused on showcasing the work of an individual writer or creator. This theme is highly customizable, with a few simple settings that allow you to quickly apply your own personal style to your site.
+This is a modded version of the original [Solo theme](https://github.com/tryghost/solo) for [Ghost](https://github.com/tryghost/ghost/), and only used for theme installation!<br>
+We were asked to build the theme for [ANTHROPOZAENTA](https://anthropozaenta.org) based on Solo. In the spirit of FOSS, we publish all changes that were made in this repository.<br>
+If you're looking to contribute to Ghost, head over to the main repository [here](https://github.com/TryGhost/Themes).
 
-**Demo: https://solo.ghost.io**
+#### IMPORTANT CHANGES:
 
-# Instructions
+- We removed the portal with all its signup and subscription options: no newsletter, no subscription based content
+- We removed the search functionality because it leverages a third party service: [UNPKG](https://unpkg.com)
+- We removed content related to twitter and facebook, yet we were asked to keep instagram
+- We changed the copyright from © to a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+- We added Mastodon integration
+- We added jQuery
 
-1. [Download this theme](https://github.com/TryGhost/Solo/archive/main.zip)
-2. Log into Ghost, and go to the `Design` settings area to upload the zip file
+# Mastodon
 
-# Development
+To include links to your Mastodon account, use the site-wide code injection tool in settings (Ghost Admin). Change `your-username` and `your-mastodon-server` to the appropriate values in the script below, then copy it into the Site Footer:
 
-Edition styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+```
+<script type="text/javascript">
+    $('.gh-author-github').attr('href', 'https://github.com/your-username');
+    $('.gh-author-mastodon').attr('href', 'https://your-mastodon-server/@your-username');
+</script>
+``` 
 
-```bash
-# Install
-yarn
 
-# Run build & watch for changes
-yarn dev
+# AN IMPORTANT NOTICE ABOUT PRIVACY:
+
+This is a quote from Ghost's [privacy declaration](https://github.com/TryGhost/Ghost/blob/main/PRIVACY.md):
+
+<em>To easily load member functionality for membership features, Ghost leverages [UNPKG](https://unpkg.com) to provide a CDN for drop-in script known as Portal. If member signups are disabled, no CDN will be injected.</em>
+
+While this is true for the Portal, in order to serch posts, tags and authors, Ghost loads UNPKG nevertheless to provide search functionality on the page. We removed all elements and buttons in our theme that are related to search functionality because we hoped in consequence the CDN also won't be injected anymore. However, the CDN still is injected into our website. If you look at the page source, it looks like this (the data key always is an individual key for each website):
+
+
+```
+<script defer src="https://unpkg.com/@tryghost/sodo-search@~1.0.0/umd/sodo-search.min.js" data-sodo-search="https://journal.ghost.io/" data-version="1.0.0" data-key="77fa60d37b3ada6d747320b139" crossorigin="anonymous"></script>
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+While search functionality is a nice feature, and even though UNPKG is an open source project, we don't like having to trust third parties. UNPKG still is powered by [Cloudflare](https://www.cloudflare.com/en-gb/privacypolicy/)... The injected CDN further loads additional resources (Javascript and CSS stylesheets), over which we have no direct control. For privacy reasons we want to serve all scripts, fonts, etc. locally.
 
-The `zip` Gulp task packages the theme files into `dist/solo.zip`, which you can then upload to your site.
+In oder to stop loading [UNPKG](https://unpkg.com) you will have to host Ghost on your own VPS and change a configuration file. You can find instructions on how to install Ghost [here](https://ghost.org/docs/install/).<br>
+Then, log into your VPS, enter the directory of your ghost installation and edit '/versions/5.x.x/core/shared/config/defaults.json', i.e.:
 
-```bash
-yarn zip
+`cd /var/www/ghost`<br>
+`nano versions/5.4.0/core/shared/config/defaults.json`
+
+Delete these lines:
+
+```
+"sodoSearch": {
+    "url": "https://unpkg.com/@tryghost/sodo-search@~1.0.0/umd/sodo-search.min.js",
+    "version": "1.0.0"
+},
 ```
 
-# Contribution
+Then restart Ghost:
 
-This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+`ghost restart`
 
-## Copyright & License
+Thats it.<br>
+We encourage you to copy, adapt, share and re-distribute!
 
-Copyright (c) 2013-2023 Ghost Foundation - Released under the [MIT license](LICENSE).
+# Copyright & License
+
+Copyright (c) 2013-2024 Ghost Foundation [& term7] - Released under the [MIT license](LICENSE).
