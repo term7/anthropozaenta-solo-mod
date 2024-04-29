@@ -59,6 +59,15 @@ body {
     }
 }
 
+.gh-card-title {
+    letter-spacing: -.04em !important;
+}
+.term7 {
+    color: #e933f6 !important;
+}
+.term7:hover {
+    color: #00ff00fc !important;
+}
 .gh-contact {
     margin-right: -15px !important;
     mix-blend-mode: difference;

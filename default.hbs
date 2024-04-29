@@ -85,48 +85,10 @@
     <footer class="gh-foot gh-outer">
         <div class="gh-foot-inner gh-inner">
             <hr>
-            <div class="gh-copyright">
-
-                <div class="gh-sponsors">
-                    <div class="sponsors-col-1">
-                        <a href="https://kultur-filz.de/" target="_blank" rel="noopener"> 
-                            {{> "icons/FILZ"}}
-                        </a>
-                    </div>
-                    <div class="sponsors-col-2" style="margin-top: 20px">
-                        {{> "icons/viessmann"}}
-                    </div>
-                </div>
-
-
-
-
-                <div class="sponsors-col-0">
-                    {{> "icons/stadt-hof"}}
-                </div>
-
-
-                <div class="gh-sponsors">
-                    <div class="sponsors-col-1">
-                        <a href="https://www.bbk-bayern.de/verbindungslinien" target="_blank" rel="noopener"> 
-                            {{> "icons/bbk"}}
-                        </a>
-                    </div>
-                    <div class="sponsors-col-2">
-                        {{> "icons/staatswappen"}}
-                    </div>
-                </div>
-                <div class="sponsors-row-2">gefördert aus Mitteln des Bayerischen Staatsministeriums für Wissenschaft und Kunst
-                    <br/>
-                    <br/>
-                </div>
-
-
-            </div>
-            <hr>
+            <br>
             <div class="gh-copyright">
                 {{#unless @custom.footer_text}}
-                    {{@site.title}} - {{date format="YYYY"}} // <a href="https://term7.info/" target="_blank" rel="noopener">design -> term7</a>
+                     {{@site.title}} - {{date format="YYYY"}} || <a class="term7" href="https://github.com/term7/anthropozaenta-solo-mod" target="_blank" rel="noopener">source code</a> -> <a class="term7" href="https://term7.info/" target="_blank" rel="noopener">term7</a>
                 {{else}}
                     {{@custom.footer_text}}
                 {{/unless}}
