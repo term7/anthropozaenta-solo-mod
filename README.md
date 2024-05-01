@@ -10,8 +10,10 @@ If you're looking to contribute to Ghost, head over to the main repository [here
 - We removed the search functionality because it leverages a third party service: [UNPKG](https://unpkg.com)
 - We removed content related to twitter and facebook, yet we were asked to keep instagram
 - We changed the copyright from © to a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
-- We added Mastodon integration
 - We added jQuery
+- We added Mastodon integration
+- We added German & English language buttons
+- We added the Anthropozänta logo as a scroll-top-to-page button
 
 # Mastodon
 
@@ -23,6 +25,22 @@ To include links to your Mastodon account, use the site-wide code injection tool
     $('.gh-author-mastodon').attr('href', 'https://your-mastodon-server/@your-username');
 </script>
 ``` 
+
+# German / English buttons
+
+anthropozaenta-solo-mod automatically shows and hides German/English navigation buttons if a marker for different language versions is present in a page or in a blog post. These buttons can be used to scoll the current page to a German and to an English language section. To automatically show these navigation buttons, include the following html snippet just above your German language section in your post:
+
+```
+<div id="DE"></div>
+``` 
+
+Also include this html snippet above your English language section in your post:
+
+```
+<div id="EN"></div>
+``` 
+
+PLEASE NOTE: you can only include one English snippet and one German snippet in your post. Multiple html snippets of the same kind in the same post will break the functionality of these buttons.
 
 
 # AN IMPORTANT NOTICE ABOUT PRIVACY:

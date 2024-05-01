@@ -82,20 +82,29 @@
             </a>
         </div>
 
+        <div id="language" class="language-nav">
+            <a class="language de" href="#DE">
+                DE
+            </a>
+            <a class="language en" href="#EN">
+                EN
+            </a>
+        </div>
+
     <footer class="gh-foot gh-outer">
         <div class="gh-foot-inner gh-inner">
             <hr>
-            <br>
+            <nav class="gh-foot-menu">
+                {{navigation type="secondary"}}
+            </nav>
             <div class="gh-copyright">
                 {{#unless @custom.footer_text}}
-                     {{@site.title}} -> {{date format="YYYY"}} -> <a class="term7" href="https://github.com/term7/anthropozaenta-solo-mod" target="_blank" rel="noopener">source code</a> -> <a class="term7" href="https://term7.info/" target="_blank" rel="noopener">term7</a>
+                     {{date format="YYYY"}} -> <a class="term7" href="https://github.com/term7/anthropozaenta-solo-mod" target="_blank" rel="noopener">SOURCE CODE</a> ->{{@site.title}} -> <a class="term7" href="https://term7.info/" target="_blank" rel="noopener">TERM7</a>
                 {{else}}
                     {{@custom.footer_text}}
                 {{/unless}}
             </div>
-            <nav class="gh-foot-menu">
-                {{navigation type="secondary"}}
-            </nav>
+            
         </div>
     </footer>
 
