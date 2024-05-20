@@ -17,7 +17,7 @@
         "theme",
         "ghost-theme"
     ],
-    "docs": "https://anthropozaenta.org/about/",
+    "docs": "https://github.com/term7/anthropozaenta-solo-mod",
     "config": {
         "posts_per_page": 6,
         "image_sizes": {

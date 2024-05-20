@@ -60,14 +60,14 @@
                 {{navigation}}
             </nav>
 
-            <div class="gh-head-actions no-accent">
-                <a id="gh-contact" class="gh-contact invert" href="mailto:foodforbots@harvest.info">
+            <div class="gh-head-actions">
+                <a id="gh-contact" class="gh-contact" href="mailto:foodforbots@harvest.info">
                     {{> "icons/email"}}
                 </a>
-                <a class="gh-author-mastodon invert" rel="me" target="_blank">
+                <a class="gh-author-mastodon" rel="me" target="_blank">
                     {{> "icons/mastodon"}}
                 </a>
-                <a class="gh-author-instagram invert" rel="me" target="_blank">
+                <a class="gh-author-instagram" rel="me" target="_blank">
                     {{> "icons/instagram"}}
                 </a>
             </div>
@@ -83,12 +83,16 @@
         </div>
 
         <div id="language" class="language-nav">
-            <a class="language de" href="#DE">
-                DE
-            </a>
-            <a class="language en" href="#EN">
-                EN
-            </a>
+            <div class="language de">
+                <a href="#DE">
+                    DE
+                </a>
+            </div>
+            <div class="language en">
+                <a href="#EN">
+                    EN
+                </a>
+            </div>
         </div>
 
     <footer class="gh-foot gh-outer">

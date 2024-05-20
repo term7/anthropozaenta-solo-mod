@@ -24,22 +24,22 @@
                             {{/if}}
                         </header>
                     {{/unless}}
+
                     <aside class="gh-article-meta">
                         <div class="gh-article-meta-inner">
-                            <div class="gh-article-meta-wrapper">
-                                <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></br>
-                            </div>
+                            <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                             {{#if primary_tag}}
-                                <a class="gh-article-tag" href="{{primary_tag.url}}" style="--tag-color: {{primary_tag.accent_color}}">{{primary_tag.name}}</a>
+                                <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
                             {{/if}}
                             {{#tags.[1]}}
-                                <a class="gh-article-tag" href="{{url}}" style="--tag-color: {{primary_tag.accent_color}}">{{name}}</a>
+                                <a class="gh-article-tag" href="{{url}}">{{name}}</a>
                             {{/tags.[1]}}
                             {{#tags.[2]}}
-                                <a class="gh-article-tag" href="{{url}}" style="--tag-color: {{primary_tag.accent_color}}">{{name}}</a>
+                                <a class="gh-article-tag" href="{{url}}">{{name}}</a>
                             {{/tags.[2]}}
                         </div>
                     </aside>
+
                 </section>
 
                 {{#if comments}}

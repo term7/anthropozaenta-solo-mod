@@ -39,10 +39,13 @@
 
 <main class="gh-main gh-outer">
     <div class="gh-feed gh-inner">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
+      {{#foreach posts}}
+          {{^has tag="ARTISTS"}}
+            {{! this block will not show posts tagged Artsts }}
+            {{> loop}}
+          {{/has}}
+      {{/foreach}}
     </div>
 </main>
-
+        
 {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}
