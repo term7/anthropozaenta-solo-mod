@@ -14,9 +14,11 @@ a::selection {
     background: #e933f6;
 }
 
+p a,
 a span {
     color: #e933f6 !important; 
 }
+p a:hover,
 a span:hover {
     color: #00ff00 !important; 
 }
@@ -129,10 +131,19 @@ body {
 .gh-author-instagram {
     cursor: pointer;
 }
-.gh-contact:hover,
-.gh-author-mastodon:hover,
-.gh-author-instagram:hover {
-    filter: invert() !important;
+.gh-author-instagram svg,
+.gh-author-mastodon svg {
+    fill: #00ff00;
+}
+.gh-contact svg {
+    stroke: #00ff00;
+}
+.gh-author-instagram svg:hover,
+.gh-author-mastodon svg:hover {
+    fill: #e933f6;
+}
+.gh-contact svg:hover {
+    stroke: #e933f6;
 }
 
 @media (max-width: 701px) {
@@ -158,6 +169,15 @@ body {
     .gh-author-instagram {
         margin-top: -41px !important;
         margin-left: 103px !important;
+    }
+}
+@media (max-width: 991px) {
+    .gh-author-instagram svg:hover,
+    .gh-author-mastodon svg:hover {
+        fill: #00ff00;
+    }
+    .gh-contact svg:hover {
+        stroke: #00ff00;
     }
 }
 
@@ -199,7 +219,7 @@ body {
     z-index: 30000000;
 }
 #scrolltop svg {
-    fill: #e933f6;
+    fill: #00ff00;
 }
 .top-button {
     text-decoration: none;
@@ -212,7 +232,7 @@ body {
         margin-bottom: 35px;
     }
     #scrolltop svg:hover {
-        fill: #00ff00;
+        fill: #e933f6;
     }
 }
 
@@ -266,10 +286,10 @@ body {
     text-decoration: none !important;
 }
 .language a {
-    color: #e933f6 !important;
+    color: #00ff00 !important;
 }
 .language a:hover {
-    color: #00ff00 !important;
+    color: #e933f6 !important;
 }
 .de {
     grid-column-start: 1;
@@ -291,6 +311,9 @@ body {
         margin-bottom: 30px !important;
     }
     .language a {
+        color: #00ff00 !important;
+    }
+    .language a:hover {
         color: #00ff00 !important;
     }
 }

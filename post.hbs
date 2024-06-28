@@ -52,7 +52,7 @@
                 <footer class="gh-article-footer gh-canvas">
                     <nav class="gh-navigation">
                         <div class="gh-navigation-previous">
-                            {{#prev_post}}
+                            {{#prev_post in="primary_tag"}}
                                 <a class="gh-navigation-link" href="{{url}}">← Previous</a>
                             {{/prev_post}}
                         </div>
@@ -60,7 +60,7 @@
                         <div class="gh-navigation-middle"></div>
 
                         <div class="gh-navigation-next">
-                            {{#next_post}}
+                            {{#next_post in="primary_tag"}}
                                 <a class="gh-navigation-link" href="{{url}}">Next →</a>
                             {{/next_post}}
                         </div>
