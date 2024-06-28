@@ -1,3 +1,5 @@
+{{! IMPORTANT: TO EXCLUDE TAGS FROM HOMEPAGE - EDIT LINE 44 }}
+
 {{!< default}}
 
 <section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
@@ -40,8 +42,8 @@
 <main class="gh-main gh-outer">
     <div class="gh-feed gh-inner">
       {{#foreach posts}}
-          {{^has tag="ARTISTS"}}
-            {{! this block will not show posts tagged ARTISTS }}
+          {{^has tag="ARTISTS, Anthropozänta 2013"}}
+            {{! this block will not show excluded posts }}
             {{> loop}}
           {{/has}}
       {{/foreach}}
