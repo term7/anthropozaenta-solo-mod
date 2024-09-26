@@ -70,7 +70,6 @@ body {
 }
 .gh-article-meta {
     padding-left: 10px;
-    z-index: 1000000 !important;
     mix-blend-mode: difference !important;
 }
 .gh-card-meta,
@@ -86,6 +85,18 @@ body {
 .gh-article-tag:hover {
     color: #00ff00 !important;
     border-color: #00ff00 !important;
+}
+.gh-article-meta .gh-author-image {
+    display: none !important;
+}
+.kg-card {
+    mix-blend-mode: saturation !important;
+}
+.pswp {
+    z-index: 130000000 !important;
+}
+.kg-blockquote-alt {
+    color: #000000 !important;
 }
 @media (max-width: 991px) {
     .gh-article-date {
