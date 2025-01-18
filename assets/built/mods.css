@@ -81,6 +81,12 @@ body {
     color: #e933f6 !important;
     border-color: #e933f6 !important;
 }
+.kg-file-card-container {
+    background-color: transparent !important;
+    border-color: #e933f6 !important;
+    border-width: 2px!important;
+    border-radius: 10px!important;
+}
 .gh-article-meta .gh-author-name a:hover,
 .gh-article-tag:hover {
     color: #00ff00 !important;
